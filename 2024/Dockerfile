@@ -6,5 +6,7 @@ COPY ./ ./
 
 WORKDIR /src/.
 
+RUN cargo build
+
 RUN cargo run
 # CMD ["./target/release/aoc"]
