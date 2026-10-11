@@ -30,7 +30,7 @@ fn check_report(arr: Vec<i32>, dampener: bool) -> bool {
             };
         }
     }
-    return true;
+    true
 }
 
 pub fn reports(filepath: &str, dampener: bool, debug: bool) -> i32 {
