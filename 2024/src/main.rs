@@ -5,9 +5,9 @@ mod day04;
 mod day05;
 
 fn main() {
-    day01::historian("./../inputs/input_1_1.txt", true);
+    day01::historian("./../inputs/input_1.txt", true);
     day01::historian("./../inputs/input_1_test.txt", true);
-    day01::historian_p2("./../inputs/input_1_2.txt", true);
+    day01::historian_p2("./../inputs/input_1.txt", true);
     day01::historian_p2("./../inputs/input_1_test.txt", true);
     println!();
 
@@ -19,13 +19,13 @@ fn main() {
 
     day03::salvage("./../inputs/input_3_1.txt", false, true);
     day03::salvage("./../inputs/input_3_test.txt", false, true);
-    day03::salvage("./../inputs/input_3_1.txt", true, true);
+    day03::salvage("./../inputs/input_3_2.txt", true, true);
     day03::salvage("./../inputs/input_3_test.txt", true, true);
     println!();
     
-    day04::word_search("./../inputs/input_4_1.txt", true);
+    day04::word_search("./../inputs/input_4.txt", true);
     day04::word_search("./../inputs/input_4_test.txt", true);
-    day04::word_search_p2("./../inputs/input_4_1.txt", true);
+    day04::word_search_p2("./../inputs/input_4.txt", true);
     day04::word_search_p2("./../inputs/input_4_test.txt", true);
     println!();
     

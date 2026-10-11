@@ -23,7 +23,7 @@ fn check_spot(search_grid: &Vec<Vec<char>>, i: usize, j: usize) -> i32 {
         let mut cursor_j = j;
         let mut word_arr: Vec<char> = vec![search_grid[cursor_i][cursor_j]]; 
         for _ in 0..3 {
-            // boundary checks above ensure this won't be a problem
+            // Boundary checks above ensure this won't be a problem
             cursor_i = cursor_i.saturating_add_signed(jump_i);
             cursor_j = cursor_j.saturating_add_signed(jump_j);
             word_arr.push(search_grid[cursor_i][cursor_j]);
@@ -32,14 +32,14 @@ fn check_spot(search_grid: &Vec<Vec<char>>, i: usize, j: usize) -> i32 {
         if word == "XMAS" { matches += 1; }
     }
 
-    return matches;
+    matches
 }
 
 fn spot_is_x_pattern(search_grid: &Vec<Vec<char>>, i: usize, j: usize) -> bool {
     let max_i = search_grid.len() - 1;
     let max_j = search_grid[i].len() - 1;
 
-    if i == 0 || j == 0 || i == max_i || j == max_j { return false; }
+    if i == 0 || j == 0 || i == max_i || j == max_j { false}
     else {
         let tl = search_grid[i - 1][j - 1];
         let tr = search_grid[i - 1][j + 1];
@@ -48,7 +48,7 @@ fn spot_is_x_pattern(search_grid: &Vec<Vec<char>>, i: usize, j: usize) -> bool {
 
         let accepted = &['M', 'S'];
 
-        return accepted.contains(&tl)
+        accepted.contains(&tl)
             && accepted.contains(&tr)
             && accepted.contains(&bl)
             && accepted.contains(&br)
@@ -107,13 +107,9 @@ pub fn word_search_p2(filepath: &str, debug: bool) -> i32 {
     let mut counter = 0;
     
     for i in 0..search_grid.len() {
-        //let curr_row = &search_grid[i];
         for j in 0..search_grid[i].len() {
             if search_grid[i][j] == 'A' {
-                match spot_is_x_pattern(&search_grid, i, j) {
-                    true => counter += 1,
-                    _ => {}
-                };
+                if spot_is_x_pattern(&search_grid, i, j) == true { counter += 1 };
             }
         }
     }
