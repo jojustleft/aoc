@@ -2,7 +2,7 @@ mod day01;
 mod day02;
 mod day03;
 mod day04;
-//mod day05;
+mod day05;
 
 fn main() {
     day01::historian("./../inputs/input_1_1.txt", true);
@@ -25,6 +25,8 @@ fn main() {
     
     day04::word_search("./../inputs/input_4_1.txt", true);
     day04::word_search("./../inputs/input_4_test.txt", true);
+    day04::word_search_p2("./../inputs/input_4_1.txt", true);
+    day04::word_search_p2("./../inputs/input_4_test.txt", true);
     println!();
     
     //day05::rule_check("./../inputs/input_5_1.txt", true);
