@@ -3,6 +3,7 @@ mod day02;
 mod day03;
 mod day04;
 mod day05;
+mod day06;
 
 fn main() {
     day01::historian("./../inputs/input_1.txt", true);
@@ -29,5 +30,12 @@ fn main() {
     day04::word_search_p2("./../inputs/input_4_test.txt", true);
     println!();
     
-    //day05::rule_check("./../inputs/input_5_1.txt", true);
+    day05::rule_check("./../inputs/input_5_1.txt", true, true);
+    day05::rule_check("./../inputs/input_5_test.txt", true, true);
+    day05::rule_check("./../inputs/input_5_1.txt", false, true);
+    day05::rule_check("./../inputs/input_5_test.txt", false, true);
+    println!();
+
+    day06::predict_positions("./../inputs/input_6.txt", true);
+    day06::predict_positions("./../inputs/input_6_test.txt", true);
 }
